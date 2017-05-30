@@ -1,7 +1,3 @@
-<!--
-This file has been generated using GitDown (https://github.com/gajus/gitdown).
-Direct edits to this will be be overwritten. Look for GitDown markup file under ./.gitdown/ path.
--->
 <h1 id="angular-swing">angular-swing</h1>
 
 [![NPM version](http://img.shields.io/npm/v/angular-swing.svg?style=flat)](https://www.npmjs.org/package/angular-swing)
@@ -9,8 +5,6 @@ Direct edits to this will be be overwritten. Look for GitDown markup file under 
 AngularJS directive for [Swing](https://github.com/gajus/swing): A swipeable cards interface. The swipe-left/swipe-right for yes/no input. As seen in apps like [Jelly](http://jelly.co/) and [Tinder](http://www.gotinder.com/), and [many others](http://www.saydaily.com/2014/09/tinder-swipe-and-media).
 
 Give it a [swing](http://gajus.com/sandbox/swing/examples/card-stack/)! and please [tweet it](https://twitter.com/intent/retweet?tweet_id=527503484867084288) if you like it. : )
-
-![Card stack example.](./.gitdown/card-stack.gif)
 
 * [angular-swing](#angular-swing)
     * [Usage](#angular-swing-usage)
@@ -114,9 +108,9 @@ $scope.add = function (name) {
 
 There are more examples that using the standalone [Swing](https://github.com/gajus/swing#usage-examples).
 
-The code for all of the examples is in the [./examples/](https://github.com/gajus/angular-swing/tree/master/examples/) folder.
+The code for all of the examples is in the [./examples/](https://github.com/graingert/angular-swing/tree/master/examples/) folder.
 
-[Raise an issue](https://github.com/gajus/angular-swing/issues) if you are missing an example.
+[Raise an issue](https://github.com/graingert/angular-swing/issues) if you are missing an example.
 
 <h2 id="angular-swing-events">Events</h2>
 
