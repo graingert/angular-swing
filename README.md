@@ -5,7 +5,6 @@ Direct edits to this will be be overwritten. Look for GitDown markup file under 
 <h1 id="angular-swing">angular-swing</h1>
 
 [![NPM version](http://img.shields.io/npm/v/angular-swing.svg?style=flat)](https://www.npmjs.org/package/angular-swing)
-[![Bower version](http://img.shields.io/bower/v/angular-swing.svg?style=flat)](http://bower.io/search/?q=angular-swing)
 
 AngularJS directive for [Swing](https://github.com/gajus/swing): A swipeable cards interface. The swipe-left/swipe-right for yes/no input. As seen in apps like [Jelly](http://jelly.co/) and [Tinder](http://www.gotinder.com/), and [many others](http://www.saydaily.com/2014/09/tinder-swipe-and-media).
 
@@ -23,15 +22,17 @@ Give it a [swing](http://gajus.com/sandbox/swing/examples/card-stack/)! and plea
 
 <h2 id="angular-swing-usage">Usage</h2>
 
-Include [./dist/angular-swing.js.](https://raw.githubusercontent.com/gajus/angular-swing/master/dist/swing.js).
-
-Load `gajus.swing` module, e.g.
+Load `angular-swing2` module, e.g.
 
 ```js
-angular.module('your-module', ['gajus.swing']);
+import ngSwing from 'angular-swing2';
+
+const MODULE_NAME = 'your-module';
+export default MODULE_NAME;
+angular.module(MODULE_NAME, [ngSwing]);
 ```
 
-Loading `gajus.swing` module will make available the `swing-stack` and `swing-card` directives.
+Loading `angular-swing2` module will make available the `swing-stack` and `swing-card` directives.
 
 Prepare a Swing stack:
 
@@ -141,14 +142,10 @@ Event listener expression can use `eventName` and [`eventObject`](#event-object)
 
 <h2 id="angular-swing-download">Download</h2>
 
-Using [Bower](http://bower.io/):
-
-```sh
-bower install angular-swing
-```
-
 Using [NPM](https://www.npmjs.org/):
 
 ```sh
-npm install angular-swing
+npm install angular-swing2
 ```
+
+You can of course wedge https://unpkg.com/angular-swing2/dist/angular-swing.js in a script src.
