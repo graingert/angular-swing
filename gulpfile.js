@@ -6,7 +6,6 @@ var karma = require('karma').server,
     ngAnnotate = require('gulp-ng-annotate'),
     uglify = require('gulp-uglify'),
     browserify = require('gulp-browserify'),
-    fs = require('fs'),
     del = require('del'),
     jsonfile = require('jsonfile');
 
@@ -37,8 +36,7 @@ gulp.task('bundle', ['clean'], function () {
 
 gulp.task('version', ['bundle'], function () {
     var name = 'angular-swing',
-        pkg = jsonfile.readFileSync('./package.json'),
-        bower = jsonfile.readFileSync('./bower.json');
+        pkg = jsonfile.readFileSync('./package.json');
 
     gulp
         .src('./dist/' + name + '.js')
@@ -48,15 +46,6 @@ gulp.task('version', ['bundle'], function () {
         .pipe(rename(name + '.min.js'))
         .pipe(header('/**\n * @version <%= version %>\n * @link https://github.com/gajus/' + name + ' for the canonical source repository\n * @license https://github.com/gajus/' + name + '/blob/master/LICENSE BSD 3-Clause\n */\n', {version: pkg.version}))
         .pipe(gulp.dest('./dist/'));
-
-    bower.name = pkg.name;
-    bower.description = pkg.description;
-    bower.version = pkg.version;
-    bower.keywords = pkg.keywords;
-    bower.license = pkg.license;
-    bower.authors = [pkg.author];
-
-    jsonfile.writeFileSync('./bower.json', bower);
 });
 
 gulp.task('watch', function () {
